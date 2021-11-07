@@ -3,6 +3,7 @@ const http = require('http');
 const https = require('https');
 const fs = require('fs');
 const helmet = require('helmet');
+const cors = reuire('cors');
 require('dotenv').config();
 const compression = require('compression')
 
@@ -10,6 +11,7 @@ const app = express();
 
 app.use(helmet());
 app.use(compression());
+app.use(cors());
 
 const serverHttp = http.createServer(app);
 
