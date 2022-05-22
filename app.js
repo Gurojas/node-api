@@ -17,6 +17,12 @@ const serverHttp = http.createServer(app);
 
 serverHttp.listen(process.env.HTTP_PORT, process.env.IP, () => {
     console.log(`Escuchando puerto ${process.env.HTTP_PORT}`);
+    if (process.env.NODE_ENV === 'dev'){
+        console.log('Servidor corriendo en dev');
+    }
+    else {
+        console.log('Servidor corriendo en prod');
+    }
 });
 
 const serverHttpsOptions = {
