@@ -51,3 +51,6 @@ app.get('/getDate', (req, res) => {
     var localISOTime = (new Date(Date.now() - tzoffset)).toISOString();
     res.send({ "datetime": localISOTime });
 });
+
+
+// comentario
